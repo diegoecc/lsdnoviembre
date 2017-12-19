@@ -1,0 +1,664 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Navegacion con tabs</title>
+	<link rel="stylesheet" href="estilos.css">
+	<link rel="stylesheet" href="font-awesome.css">
+
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script src="main.js"></script>
+</head>
+
+<body>
+	<div class="wrap">
+		<ul class="tabs">
+			<li><a href="#tab1"><span class="fa fa-tachometer" aria-hidden="true"></span><span class="tab-text">USUARIOS POR MINUTO</span></a></li>
+		</ul>
+
+		<div class ="secciones">
+
+			<article id = "tab1">
+
+			<center><h1>Audiencia tvgo Live Perú de Lunes a Viernes - Noviembre </h1></center>
+			<br>
+			<br>
+
+			<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+			<script type="text/javascript">
+			google.charts.load('current', {'packages':['corechart']});
+			google.charts.setOnLoadCallback(drawChart);
+
+		     function drawChart() {
+		        var data = google.visualization.arrayToDataTable([
+		          ['Fecha',  'Total'],
+		          ['01/11',  2319],
+		          ['02/11',  2828],
+		          ['03/11',  2983],
+		          ['06/11',  3116],
+		          ['07/11',  3224],
+		          ['08/11',  3271],
+		          ['09/11',  2744],
+		          ['10/11',  3126],
+		          ['13/11',  3093],
+		          ['14/11',  3176],
+		          ['15/11',  3368],
+		          ['16/11',  3983],
+		          ['17/11',  3160],
+		          ['20/11',  2998],
+		          ['21/11',  3251],
+		          ['22/11',  3375],
+		          ['23/11',  3197],
+		          ['24/11',  3095],
+		          ['27/11',  2917],
+		          ['28/11',  3252],
+		          ['29/11',  3357],
+		          ['30/11',  3195]
+		        ]);
+
+		        var options = {
+		          title: 'PROMEDIO USUARIOS TOTALES POR DIA POR HORA',
+		        };
+
+		        var chart = new google.visualization.SteppedAreaChart(document.getElementById('chart_div'));
+
+		        chart.draw(data, options);
+		     	 }
+		    	</script>
+
+		   		<div id="chart_div" style="width: automatic; height: automatic;"></div>
+
+			<br>
+
+		    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+		    <script type="text/javascript">
+		    google.charts.load('current', {'packages':['corechart']});
+		    google.charts.setOnLoadCallback(drawChart);
+
+		      function drawChart() {
+		        var data = google.visualization.arrayToDataTable([
+		           ['Fecha', 'Desktop',  'App',  'MobileWeb'],
+	          	   ['01/11',  1559,      685,       74],
+	          	   ['02/11',  1987,      755,       85],
+	               ['03/11',  2109,      788,       86],
+	               ['06/11',  2275,      750,       90],
+	               ['07/11',  2331,      801,       91],
+	               ['08/11',  2359,      819,       94],
+	               ['09/11',  1776,      882,       86],
+	               ['10/11',  2052,      999,       74],
+	               ['13/11',  2165,      837,       91],
+	               ['14/11',  2156,      929,       91],
+	               ['15/11',  2237,     1047,       84],
+	               ['16/11',  2672,     1201,      110],
+	               ['17/11',  2141,      936,       83],
+	               ['20/11',  2084,      831,       83],
+	               ['21/11',  2202,      958,       91],
+	               ['22/11',  2329,      913,      133],
+	               ['23/11',  2278,      812,      106],
+	               ['24/11',  2099,      903,       94],
+	               ['27/11',  2123,      700,       95],
+	               ['28/11',  2235,      922,       95],
+	               ['29/11',  2260,      998,       98],
+	               ['30/11',  2142,      962,       91]
+	            ]);
+
+		        var options = {
+		          title: 'PROMEDIO DE USUARIOS POR MINUTO POR DIA - PLATAFORMA',
+		          curveType: 'function',
+		          legend: { position: 'bottom left' }
+		        };
+
+		        var chart = new google.visualization.LineChart(document.getElementById('curve_chart2'));
+
+		        chart.draw(data, options);
+			      }
+			    </script>
+
+			    <div id="curve_chart2" style="width: automatic; height: automatic"></div>
+
+			 <br>
+			 <br>
+			 <br>
+			 <br>
+			 <br>
+			 <br>
+
+			<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+			<script type="text/javascript">
+			google.charts.load('current', {'packages':['corechart']});
+			google.charts.setOnLoadCallback(drawChart);
+
+		     function drawChart() {
+		        var data = google.visualization.arrayToDataTable([
+		          ['Hora',  'Total'],
+		          ['00:00',  2142],
+		          ['01:00',  1094],
+		          ['02:00',   740],
+		          ['03:00',   578],
+		          ['04:00',   505],
+		          ['05:00',   774],
+		          ['06:00',  1796],
+		          ['07:00',  2587],
+		          ['08:00',  2979],
+		          ['09:00',  3194],
+		          ['10:00',  3347],
+		          ['11:00',  2990],
+		          ['12:00',  2768],
+		          ['13:00',  3304],
+		          ['14:00',  3345],
+		          ['15:00',  3040],
+		          ['16:00',  2509],
+		          ['17:00',  2414],
+		          ['18:00',  3541],
+		          ['19:00',  6617],
+		          ['20:00',  7960],
+		          ['21:00',  7580],
+		          ['22:00',  6027],
+		          ['23:00',  3473]
+		        ]);
+
+		        var options = {
+		          title: 'PROMEDIO USUARIOS POR MINUTO POR HORA',
+		        };
+
+		        var chart = new google.visualization.SteppedAreaChart(document.getElementById('chart_div3'));
+
+		        chart.draw(data, options);
+		     	 }
+		    	</script>
+
+		   		<div id="chart_div3" style="width: automatic; height: automatic;"></div>
+
+			<br>
+
+		    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+		    <script type="text/javascript">
+		    google.charts.load('current', {'packages':['corechart']});
+		    google.charts.setOnLoadCallback(drawChart);
+
+		      function drawChart() {
+		        var data = google.visualization.arrayToDataTable([
+	          ['Hora', 'Desktop',  'App',  'MobileWeb'],
+	          ['00:00',  1372,      722,       48],
+	          ['01:00',   624,      453,       18],
+	          ['02:00',   400,      331,        9],
+	          ['03:00',   301,      270,        6],
+	          ['04:00',   257,      243,        5],
+	          ['05:00',   397,      355,       22],
+	          ['06:00',  1060,      660,       76],
+	          ['07:00',  1712,      787,       88],
+	          ['08:00',  2097,      798,       85],
+	          ['09:00',  2248,      855,       91],
+	          ['10:00',  2176,     1033,      138],
+	          ['11:00',  2002,      892,       95],
+	          ['12:00',  1951,      763,       54],
+	          ['13:00',  2381,      847,       76],
+	          ['14:00',  2440,      834,       71],
+	          ['15:00',  2180,      789,       71],
+	          ['16:00',  1734,      718,       57],
+	          ['17:00',  1687,      677,       50],
+	          ['18:00',  2551,      897,       93],
+	          ['19:00',  4749,     1604,      263],
+	          ['20:00',  5852,     1839,      270],
+	          ['21:00',  5457,     1881,      241],
+	          ['22:00',  4010,     1808,      208],
+	          ['23:00',  2261,     1137,       75]
+	        ]);
+
+		        var options = {
+		          title: 'PROMEDIO USUARIOS POR MINUTO POR HORA - PLATAFORMA',
+		          curveType: 'function',
+		          legend: { position: 'bottom left' }
+		        };
+
+		        var chart = new google.visualization.LineChart(document.getElementById('curve_chart4'));
+
+		        chart.draw(data, options);
+			      }
+			    </script>
+
+			    <div id="curve_chart4" style="width: automatic; height: automatic"></div>
+
+    <br>
+	<br>
+	<br> 
+	<br>
+	<br>
+	<br>
+
+			<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+			<script type="text/javascript">
+			google.charts.load('current', {'packages':['corechart']});
+			google.charts.setOnLoadCallback(drawChart);
+
+		     function drawChart() {
+		        var data = google.visualization.arrayToDataTable([
+		          ['Fecha',  'Total'],
+		          ['01/11',  5361],
+		          ['02/11',  6488],
+		          ['03/11',  6339],
+		          ['06/11',  6344],
+		          ['07/11',  6532],
+		          ['08/11',  6750],
+		          ['09/11',  5250],
+		          ['10/11',  5381],
+		          ['13/11',  6542],
+		          ['14/11',  6763],
+		          ['15/11',  5607],
+		          ['16/11',  6647],
+		          ['17/11',  6040],
+		          ['20/11',  6406],
+		          ['21/11',  6698],
+		          ['22/11',  6603],
+		          ['23/11',  6722],
+		          ['24/11',  6355],
+		          ['27/11',  6398],
+		          ['28/11',  6680],
+		          ['29/11',  6914],
+		          ['30/11',  6767]
+		        ]);
+
+		        var options = {
+		          title: 'PROMEDIO DE USUARIOS POR MINUTO POR DIA - PRIMETIME (18:00 - 23:00)',
+		        };
+
+		        var chart = new google.visualization.SteppedAreaChart(document.getElementById('chart_div5'));
+
+		        chart.draw(data, options);
+		     	 }
+		    	</script>
+	
+		   		<div id="chart_div5" style="width: automatic; height: automatic;"></div>
+
+			<br>
+
+		    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+		    <script type="text/javascript">
+		    google.charts.load('current', {'packages':['corechart']});
+		    google.charts.setOnLoadCallback(drawChart);
+
+		      function drawChart() {
+		        var data = google.visualization.arrayToDataTable([
+		          ['Fecha', 'Desktop',  'App',  'MobileWeb'],
+		          ['01/11',  3857,     1295,      209],
+		          ['02/11',  4770,     1489,      230],
+		          ['03/11',  4662,     1452,      225],
+		          ['06/11',  4780,     1352,      211],
+		          ['07/11',  4923,     1397,      212],
+		          ['08/11',  5017,     1517,      216],
+		          ['09/11',  3515,     1536,      199],
+		          ['10/11',  3413,     1862,      106],
+		          ['13/11',  4715,     1614,      214],
+		          ['14/11',  4892,     1649,      222],
+		          ['15/11',  3700,     1752,      155],
+		          ['16/11',  4690,     1751,      206],
+		          ['17/11',  4289,     1572,      180],
+		          ['20/11',  4608,     1597,      201],
+		          ['21/11',  4673,     1802,      224],
+		          ['22/11',  4902,     1402,      298],
+		          ['23/11',  4856,     1617,      249],
+		          ['24/11',  4466,     1663,      226],
+		          ['27/11',  4543,     1628,      227],
+		          ['28/11',  4744,     1704,      233],
+		          ['29/11',  4803,     1864,      247],
+		          ['30/11',  4703,     1818,      245]
+		        ]);
+
+		        var options = {
+		          title: 'PROMEDIO DE USUARIOS POR MINUTO POR DIA - PLATAFORMA - PRIMETIME (18:00 - 23:00)',
+		          curveType: 'function',
+		          legend: { position: 'bottom left' }
+		        };
+
+		        var chart = new google.visualization.LineChart(document.getElementById('curve_chart6'));
+
+		        chart.draw(data, options);
+			      }
+			    </script>
+		
+			    <div id="curve_chart6" style="width: automatic; height: automatic"></div>
+
+	<br>
+	<br>
+	<br>
+	<br>
+
+			    <center><h1>Audiencia tvgo Live Perú de Lunes a Domingo - Octubre </h1></center>
+	<br>
+	<br>
+	<br>
+	<br>
+		
+			<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+			<script type="text/javascript">
+			google.charts.load('current', {'packages':['corechart']});
+			google.charts.setOnLoadCallback(drawChart);
+
+		     function drawChart() {
+		        var data = google.visualization.arrayToDataTable([
+		          ['Fecha',  'Total'],
+		          ['01/11',  2319],
+		          ['02/11',  2828],
+		          ['03/11',  2983],
+		          ['04/11',  2166],
+		          ['05/11',  2023],
+		          ['06/11',  3116],
+		          ['07/11',  3224],
+		          ['08/11',  3271],
+		          ['09/11',  2744],
+		          ['10/11',  3126],
+		          ['11/11',  1746],
+		          ['12/11',  1550],
+		          ['13/11',  3093],
+		          ['14/11',  3176],
+		          ['15/11',  3368],
+		          ['16/11',  3983],
+		          ['17/11',  3160],
+		          ['18/11',  2004],
+		          ['19/11',  1912],
+		          ['20/11',  2998],
+		          ['21/11',  3251],
+		          ['22/11',  3375],
+	          	  ['23/11',  3197],
+	              ['24/11',  3095],
+	     	      ['25/11',  2055],
+	     	      ['26/11',  1706],
+	     	      ['27/11',  2917],
+	     	      ['28/11',  3252],
+	     	      ['29/11',  3357],
+	     	      ['30/11',  3195]
+		        ]);
+
+		        var options = {
+		          title: 'PROMEDIO USUARIOS TOTALES POR DIA POR HORA',
+		        };
+
+		        var chart = new google.visualization.SteppedAreaChart(document.getElementById('chart_div7'));
+
+		        chart.draw(data, options);
+		     	 }
+		    	</script>
+
+		   		<div id="chart_div7" style="width: automatic; height: automatic;"></div>
+
+	<br>
+
+			<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+   			<script type="text/javascript">
+      		google.charts.load('current', {'packages':['corechart']});
+      		google.charts.setOnLoadCallback(drawChart);
+
+      		function drawChart() {
+        	var data = google.visualization.arrayToDataTable([
+	          ['Fecha', 'Desktop',  'App',  'MobileWeb'],
+	          ['01/11',  1559,      685,       74],
+	          ['02/11',  1987,      755,       85],
+	          ['03/11',  2109,      788,       86],
+	          ['04/11',  1496,      601,       69],
+	          ['05/11',  1408,      552,       63],
+	          ['06/11',  2275,      750,       90],
+	          ['07/11',  2331,      801,       91],
+	          ['08/11',  2359,      819,       94],
+	          ['09/11',  1776,      882,       86],
+	          ['10/11',  2052,      999,       74],
+	          ['11/11',   997,      696,       53],
+	          ['12/11',   973,      530,       47],
+	          ['13/11',  2165,      837,       91],
+	          ['14/11',  2156,      929,       91],
+	          ['15/11',  2237,     1047,       84],
+	          ['16/11',  2672,     1201,      110],
+	          ['17/11',  2141,      936,       83],
+	          ['18/11',  1306,      645,       53],
+	          ['19/11',  1273,      583,       56],
+	          ['20/11',  2084,      831,       83],
+	          ['21/11',  2202,      958,       91],
+	          ['22/11',  2329,      913,      133],
+	          ['23/11',  2278,      812,      106],
+	          ['24/11',  2099,      903,       94],
+	     	  ['25/11',  1359,      639,       57],
+	     	  ['26/11',  1153,      506,       47],
+	     	  ['27/11',  2123,      700,       95],
+	     	  ['28/11',  2235,      922,       95],
+	     	  ['29/11',  2260,      998,       98],
+	     	  ['30/11',  2142,      962,       91]
+	        ]);
+
+	        var options = {
+	          title: 'PROMEDIO USUARIOS POR DIA POR HORA - PLATAFORMA',
+	          curveType: 'function',
+	          legend: { position: 'bottom left' }
+	        };
+
+		    var chart = new google.visualization.LineChart(document.getElementById('curve_chart8'));
+
+		    chart.draw(data, options);
+		    }
+		    </script>
+
+		    <div id="curve_chart8" style="width: automatic; height: automatic"></div>
+
+	<br>
+	<br>
+	<br> 
+	<br>
+	<br>
+	<br>	    
+			<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+			<script type="text/javascript">
+			google.charts.load('current', {'packages':['corechart']});
+			google.charts.setOnLoadCallback(drawChart);
+
+		     function drawChart() {
+		        var data = google.visualization.arrayToDataTable([
+		          ['Hora',  'Total'],
+		          ['00:00',  2141],
+		          ['01:00',  1081],
+		          ['02:00',   731],
+		          ['03:00',   570],
+		          ['04:00',   494],
+		          ['05:00',   696],
+		          ['06:00',  1538],
+		          ['07:00',  2283],
+		          ['08:00',  2725],
+		          ['09:00',  3000],
+		          ['10:00',  3065],
+		          ['11:00',  2621],
+		          ['12:00',  2366],
+		          ['13:00',  2780],
+		          ['14:00',  2798],
+		          ['15:00',  2533],
+		          ['16:00',  2133],
+		          ['17:00',  2105],
+		          ['18:00',  3046],
+		          ['19:00',  5546],
+		          ['20:00',  6735],
+		          ['21:00',  6708],
+		          ['22:00',  5756],
+		          ['23:00',  3900]
+		        ]);
+
+		        var options = {
+		          title: 'PROMEDIO USUARIOS TOTALES POR MINUTO POR HORA',
+		        };
+
+		        var chart = new google.visualization.SteppedAreaChart(document.getElementById('chart_div9'));
+
+		        chart.draw(data, options);
+		     	 }
+		    	</script>
+
+		   		<div id="chart_div9" style="width: automatic; height: automatic;"></div>
+
+	<br>	
+			<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+   			<script type="text/javascript">
+      		google.charts.load('current', {'packages':['corechart']});
+      		google.charts.setOnLoadCallback(drawChart);
+
+      		function drawChart() {
+        	var data = google.visualization.arrayToDataTable([
+	          ['Hora', 'Desktop',  'App',  'MobileWeb'],
+	          ['00:00',  1342,      746,       52],
+	          ['01:00',   601,      463,       18],
+	          ['02:00',   385,      337,        9],
+	          ['03:00',   289,      274,        6],
+	          ['04:00',   245,      245,        5],
+	          ['05:00',   348,      331,       17],
+	          ['06:00',   889,      589,       60],
+	          ['07:00',  1488,      720,       75],
+	          ['08:00',  1892,      756,       77],
+	          ['09:00',  2098,      816,       86],
+	          ['10:00',  2025,      925,      116],
+	          ['11:00',  1761,      783,       76],
+	          ['12:00',  1648,      674,       44],
+	          ['13:00',  1971,      748,       61],
+	          ['14:00',  2012,      729,       57],
+	          ['15:00',  1794,      683,       56],
+	          ['16:00',  1459,      628,       46],
+	          ['17:00',  1455,      607,       43],
+	          ['18:00',  2182,      786,       78],
+	          ['19:00',  3983,     1350,      214],
+	          ['20:00',  4959,     1553,      223],
+	          ['21:00',  4810,     1680,      217],
+	          ['22:00',  3838,     1701,      217],
+	          ['23:00',  2555,     1220,      125]
+	        ]);
+
+	        var options = {
+	          title: 'PROMEDIO USUARIOS POR MINUTO POR HORA - PLATAFORMA',
+	          curveType: 'function',
+	          legend: { position: 'bottom left' }
+	        };
+
+		    var chart = new google.visualization.LineChart(document.getElementById('curve_chart10'));
+
+		    chart.draw(data, options);
+		    }
+		    </script>
+
+		    <div id="curve_chart10" style="width: automatic; height: automatic"></div>
+
+	<br>
+	<br>
+	<br> 
+	<br>
+	<br>
+	<br>	
+
+			<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+			<script type="text/javascript">
+			google.charts.load('current', {'packages':['corechart']});
+			google.charts.setOnLoadCallback(drawChart);
+
+		     function drawChart() {
+		        var data = google.visualization.arrayToDataTable([
+		          ['Fecha',  'Total'],
+		          ['01/11',  5361],
+		          ['02/11',  6488],
+		          ['03/11',  6339],
+		          ['04/11',  4087],
+		          ['05/11',  3518],
+		          ['06/11',  6344],
+		          ['07/11',  6532],
+		          ['08/11',  6750],
+		          ['09/11',  5250],
+		          ['10/11',  5381],
+		          ['11/11',  2802],
+		          ['12/11',  2891],
+		          ['13/11',  6542],
+		       	  ['14/11',  6763],
+		       	  ['15/11',  5607],
+		          ['16/11',  6647],
+		          ['17/11',  6040],
+		          ['18/11',  3630],
+		          ['19/11',  3433],
+		          ['20/11',  6406],
+		          ['21/11',  6698],
+		          ['22/11',  6603],
+		          ['23/11',  6722],
+		          ['24/11',  6355],
+		          ['25/11',  3706],
+		          ['26/11',  3092],
+		          ['27/11',  6398],
+		          ['28/11',  6680],
+		          ['29/11',  6914],
+		          ['30/11',  6767]
+		        ]);
+
+		        var options = {
+		          title: 'PROMEDIO DE USUARIOS POR MINUTO POR DIA - PRIMETIME (18:00 - 23:00)',
+		        };
+
+		        var chart = new google.visualization.SteppedAreaChart(document.getElementById('chart_div11'));
+
+		        chart.draw(data, options);
+		     	 }
+		    	</script>
+	
+		   		<div id="chart_div11" style="width: automatic; height: automatic;"></div>
+
+			<br>
+
+		    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+		    <script type="text/javascript">
+		    google.charts.load('current', {'packages':['corechart']});
+		    google.charts.setOnLoadCallback(drawChart);
+
+		      function drawChart() {
+		        var data = google.visualization.arrayToDataTable([
+		          ['Fecha', 'Desktop',  'App',  'MobileWeb'],
+		          ['01/11',  3857,     1295,      209],
+		          ['02/11',  4770,     1489,      230],
+		          ['03/11',  4662,     1452,      225],
+		          ['04/11',  2970,      960,      158],
+		          ['05/11',  2646,      762,      110],
+		          ['06/11',  4780,     1352,      211],
+		          ['07/11',  4923,     1397,      212],
+		          ['08/11',  5017,     1517,      216],
+		          ['09/11',  3515,     1536,      199],
+		          ['10/11',  3413,     1862,      106],
+		          ['11/11',  1660,     1013,      129],
+		          ['12/11',  1999,      792,      100],
+		          ['13/11',  4715,     1614,      214],
+		          ['14/11',  4892,     1649,      222],
+		          ['15/11',  3700,     1752,      155],
+		          ['16/11',  4690,     1751,      206],
+		          ['17/11',  4289,     1572,      180],
+		          ['18/11',  2511,      994,      125],
+		          ['19/11',  2464,      855,      113],
+		          ['20/11',  4608,     1597,      201],
+		          ['21/11',  4673,     1802,      224],
+		          ['22/11',  4902,     1402,      298],
+		          ['23/11',  4856,     1617,      249],
+		          ['24/11',  4466,     1663,      226],
+		          ['25/11',  2584,      996,      126],
+		          ['26/11',  2277,      715,      100],
+		          ['27/11',  4543,     1628,      227],
+		          ['28/11',  4744,     1704,      233],
+		          ['29/11',  4803,     1864,      247],
+		          ['30/11',  4703,     1818,      245]
+		        ]);
+
+		        var options = {
+		          title: 'PROMEDIO DE USUARIOS POR MINUTO POR DIA - PLATAFORMA - PRIMETIME (18:00 - 23:00)',
+		          curveType: 'function',
+		          legend: { position: 'bottom left' }
+		        };
+
+		        var chart = new google.visualization.LineChart(document.getElementById('curve_chart12'));
+
+		        chart.draw(data, options);
+			      }
+			    </script>
+		
+			    <div id="curve_chart12" style="width: automatic; height: automatic"></div>
+
+			</article>
+				 
+		</div>
+	</div>
+	
+</body>
+</html>
+
